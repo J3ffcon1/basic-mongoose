@@ -2,4 +2,4 @@ language: node_js
 node_js: "8"
 services: mongodb
 env:
-  - MONGODB_URI=mongodb://localhost:27017/videogames-test
+  - MONGODB_URI=mongodb://localhost:27017/videogames
