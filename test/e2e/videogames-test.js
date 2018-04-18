@@ -6,7 +6,7 @@ const MMOrpg = require('../../lib/models/videogame');
 describe('World of Wacraft API test', () => {
     
     before(() => {
-        return mongoose.connection.dropCollection('videogames')
+        return mongoose.connection.dropCollection('mmorpgs')
             .catch(err => {
                 if(err.codeName !== 'NamespaceNotFound') throw err;
             });
