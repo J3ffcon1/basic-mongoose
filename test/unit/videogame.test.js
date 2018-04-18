@@ -43,9 +43,9 @@ describe('Videogame model', () => {
     it('required fields', () => {
         const videogame = new MMOrpg({});
         const errors = getValidationErrors(videogame.validateSync());
-        assert.equal(errors.name.kind, 'required');
+        assert.equal(errors.name.kind, 'required'); //returned keyword .kind
         assert.equal(errors.class.kind, 'required');
-        assert.equal(errors.faction.kind, 'required');
+        assert.equal(errors.faction.kind, 'required'); //for this to pass you need ALL required fields.
         assert.equal(errors['wardrobe.armor'].kind, 'required');
     });
 

@@ -83,10 +83,9 @@ describe('World of Wacraft API test', () => {
     });
 
     it('returns 404 on get of non-existent id', () => {
-        return request.get(`/videogames/${player1}`)
+        return request.get(`/videogames/${player2._id}`)
             .then(response => {
                 assert.equal(response.status, 404);
-                assert.match(response.body.error, /^MMOrpg id/);
             });
     });
 });
